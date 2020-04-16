@@ -1,4 +1,6 @@
 const express = require('express')
+const port = process.env.PORT || 3000
+
 const app = express()
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
@@ -11,7 +13,7 @@ app.use('/todos', todoRoute)
 const { db } = require('./db')
 db.sync()
   .then(() => {
-    app.listen(6543)
+    app.listen(port)
   })
   .catch((err) => {
     console.error(err)
