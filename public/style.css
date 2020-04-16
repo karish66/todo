@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/*Styling of navigation bar */
+#navigationBar {
+    background-color: black;
+    height:80px;
+}
+#logo {
+    color: #3a9bb0;
+    font-size: 40px;
+    float: left;
+    margin: 20px;
+}
+
+/*Styling of home section */
+.tool-bar-container{
+    text-align: center;
+}
+#todo-container{
+    margin: auto;
+    width: 400px;
+}
+.card-header{
+    display:flex;
+    width:100%;
+}
+.part1, .part3 {
+    width: 15%;
+}
+.part2{
+    width: 70%;
+}
+#edit{
+    cursor: pointer;
+}
+
+
+
+/*Styling of Modal*/
+span {
+    color:red;
+}
+input {
+    text-align:left;
+}
+#statusBox{
+  width:20px;
+  height: 20px;
+}
+#priorityBox{
+    width: 200px;
+    height: 30px;
+}
+td{
+    text-align: left;
+    padding: 5px;
+}

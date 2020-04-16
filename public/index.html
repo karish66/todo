@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <!--CSS file-->
+    <link rel="stylesheet" href="style.css">
+    <!--Bootstrap Library-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!--Font Library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Javascript file-->
+    <script async defer src="script.js"></script>
+</head>
+
+<body>
+    <!--navigation bar-->
+    <header id="home">
+        <div id="navigationBar">
+            <p id="logo">Todo</p>
+        </div>
+    </header>
+    <br>    
+    <h2>Task and Notes Manager</h2>
+    <br>
+
+
+    <!--Tool bar-->
+    <div class="tool-bar-container">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal" >Add Task</button>
+        
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" id="sortBy" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sort By
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" id="dueDate" href="#">Due Date</a>
+                    <a class="dropdown-item" id="priority" href="#">Priority</a>
+                    <a class="dropdown-item" id="status" href="#">Status</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--Todo List-->
+    <div id='todo-container'>
+    </div>
+
+    <!--Modal Create-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create New Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">                    
+                    <form id="" name="" >
+                        <div class="form-group">
+                            <label for="titleBox" class="col-form-label">Title <span>*</span> :</label>
+                            <input type="text" class="form-control" id="titleBox" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descriptionBox" class="col-form-label"></label>Description :</label>
+                            <input type="text" class="form-control" id="descriptionBox" >
+                        </div>
+                        <div class="form-group">
+                            <label for="dueDateBox" class="col-form-label">Due Date <span>*</span> :</label>
+                            <input type="date" class="form-control" id="dueDateBox" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="statusBox" class="col-form-label">Status :</label>
+                            <input type="checkbox" id="statusBox" name="status" value="Completed">
+                        </div>
+                        <div class="form-group">
+                            <label for="priorityBox" class="col-form-label">Priority :</label>
+                            <select id="priorityBox" name="priority">
+                                <option value="High">High</option>
+                                <option value="Medium" selected>Medium</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="create">Create</button>
+                        </div>
+                    </form>                
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
